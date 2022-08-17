@@ -32,16 +32,16 @@ E {Timestamp} é o momento no seguinte formato, uma string com ano, mês, dia, h
 O retorno desse endpoint será algo no formato:
 ```json
 {
-  url: "cnn.com",
-  archived_snapshots: {
-    closest: {
-      status: "200",
-      available: true,
-      url: "http://web.archive.org/web/20010911204733/http://www2.cnn.com:80/",
-      timestamp: "20010911204733"
+  "url": "cnn.com",
+  "archived_snapshots": {
+    "closest": {
+      "status": "200",
+      "available": true,
+      "url": "http://web.archive.org/web/20010911204733/http://www2.cnn.com:80/",
+      "timestamp": "20010911204733"
     }
   },
-  timestamp: "20010911205340"
+  "timestamp": "20010911205340"
 }
 ```
 
