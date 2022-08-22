@@ -21,12 +21,12 @@ class Form extends Component {
     this.setState({
       [name]: value,
     });
-  }
+  };
 
   onSubmit = async (state) => {
     const { searchUrl } = this.props;
     searchUrl(state);
-  }
+  };
 
   render() {
     const { url, year, month, day, hour } = this.state;
