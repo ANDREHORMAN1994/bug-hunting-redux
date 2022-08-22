@@ -64,9 +64,9 @@ class TimeMachine extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  closest: state.timeMachine.archived_snapshots.closest || {},
-  timestamp: state.timeMachine.archived_snapshots.closest.timestamp,
-  isLoading: state.timeMachine.loading,
+  closest: state.archived_snapshots.closest || {},
+  timestamp: state.archived_snapshots.closest.timestamp,
+  isLoading: state.loading,
 });
 
 TimeMachine.propTypes = {

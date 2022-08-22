@@ -17,17 +17,13 @@ const INITIAL_STATE = {
 const timeMachineReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
   case SET_SNAPSHOP: {
-    return {
-      ...state,
-      ...action.payload,
-      loading: false,
-    };
+    state.archived_snapshots = action.payload.archived_snapshots;
+    state.loading = false;
+    return state;
   }
   case LOADING:
-    return {
-      ...state,
-      loading: true,
-    };
+    state.loading = true;
+    return state;
   default:
     return state;
   }
