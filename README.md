@@ -8,18 +8,6 @@ Este projeto consiste em um formulário onde é possível pesquisar um site espe
 Então neste projeto serão duas partes específicas, um formulário para pesquisar sites e a visualização do site logo abaixo.
 
 ---
-
-
-# Sumário
-
-- [Boas vindas ao repositório do projeto Trybe Wallet!](#boas-vindas-ao-repositório-do-projeto-trybe-wallet)
-- [Sumário](#sumário)
-- [Requisitos do projeto](#requisitos-do-projeto)
-  - [Lista de requisitos](#lista-de-requisitos)
-    - [Formulário](#página-de-login)
-      - [1. Crie um formulário para pesquisar sites no passado:](#1-crie-uma-página-inicial-de-login-com-os-seguintes-campos-e-características)
-    - [Pré-visualização do site](#página-da-carteira)
-      - [2. Crie um iframe onde é possível pré-visualizar um site específico:](#2-crie-uma-página-para-sua-carteira-com-as-seguintes-características)
 ## Documentação da API Web Archive
 
 Sua página _web_ irá consumir os dados da API do _Web Archive API_ para buscar e exibir o estado de sites no passado. Para realizar essas buscas, vocês precisarão consultar o seguinte _endpoint_:
@@ -48,13 +36,22 @@ O retorno desse endpoint será algo no formato:
 Dentro da chave archived_snapshots temos os resultados para a busca, e iremos utilizar o conteúdo de da chave _closest_ que contém o status mais próximo encontrado de nossa pesquisa.
 
 ---
-## Lista de requisitos
 
-### Formulário
+## Descrição do projeto
 
+Este projeto contém um formulário com os seguintes campos:
+  - Endereço do site
+  - Ano da busca
+  - Mês da busca
+  - Dia da busca
+  - Hora da busca
 
-#### 1. Crie um formulário para pesquisar sites no passado:
+E ao clicar no botão `Procurar` um feedback de carregando deve ser exibido e caso a resposta da API seja correta, deve ser utilizada a resposta da API para setar o estado global da aplicação redux no reducer chamado `time_machine`. Este valor será utilizado então para exibir um `iframe`* do site encontrado pela pesquisa.
 
-### Pré-visualização do site
+Porém este projeto contém bugs que precisam ser corrigidos, então o seu objetivo será descobrir e corrigir todos estes bugs. 🚫 🦟 🚫
 
-#### 2. Crie um iframe onde é possível pré-visualizar um site específico:
+**`*`**: Iframe é uma tag html que permite a exibição de um outro site dentro de um site específico, para isso basta inserir o endereço do site que se quer exibir no atributo `src` da tag `iframe` da seguinte forma:
+
+```html
+<iframe src="http://site.com.br" />
+```

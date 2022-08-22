@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { onUrlSearch } from '../redux/actions/timeMachine';
 
 class Form extends Component {
   constructor(props) {
@@ -21,12 +20,12 @@ class Form extends Component {
     this.setState({
       [name]: value,
     });
-  }
+  };
 
   onSubmit = async (state) => {
     const { searchUrl } = this.props;
     searchUrl(state);
-  }
+  };
 
   render() {
     const { url, year, month, day, hour } = this.state;
@@ -111,7 +110,7 @@ Form.propTypes = {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  searchUrl: (state) => dispatch(onUrlSearch(state)),
+  searchUrl: (state) => dispatch(state),
 });
 
-export default connect(null, mapDispatchToProps)(Form);
+export default connect(mapDispatchToProps)(Form);

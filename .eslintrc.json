@@ -1,17 +1,22 @@
 {
-  "env": {
-    "browser": true,
-    "es2020": true
-  },
   "extends": "trybe-frontend",
-  "parser": "babel-eslint",
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
-    "sourceType": "module"
-  },
-  "plugins": [
-    "react"
+  "overrides": [
+    {
+      "files": ["src/tests/**/*.js"],
+      "rules": {
+        "max-len": [
+          "error",
+          {
+            "code": 90,
+            "ignoreComments": true,
+            "ignoreUrls": true,
+            "ignoreRegExpLiterals": true,
+            "ignoreStrings": true
+          }
+        ],
+        "max-lines": [ "off" ],
+        "no-magic-numbers": ["off"]
+      }
+    }
   ]
 }

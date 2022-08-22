@@ -5,8 +5,8 @@
 - [ ] pensar quais actions serão necessárias na sua aplicação
 
 *Instalação*
-- [ ] npm i redux react-redux;
-- [ ] npm i redux-devtools-extension;
+- [ ] `npm i redux react-redux`
+- [ ] `npm i @redux-devtools/extension`
 
 *Criar dentro do diretório src:*
 - [ ] diretório `redux`
@@ -68,7 +68,7 @@ export default rootReducer;
 
 ```js
 import { createStore } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
+import { composeWithDevTools } from '@redux-devtools/extension';
 import rootReducer from '../reducers';
 
 const store = createStore(
