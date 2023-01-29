@@ -113,4 +113,4 @@ const mapDispatchToProps = (dispatch) => ({
   searchUrl: (state) => dispatch(state),
 });
 
-export default connect(mapDispatchToProps)(Form);
+export default connect(null, mapDispatchToProps)(Form);
