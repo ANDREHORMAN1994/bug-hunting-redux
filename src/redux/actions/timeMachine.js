@@ -10,10 +10,10 @@ export const setLoading = () => ({
   type: LOADING,
 });
 
-export const onUrlSearch = (payload) => async () => {
-  setLoading();
+export const onUrlSearch = (payload) => async (dispatch) => {
+  dispatch(setLoading());
   const { year, month, day, hour, url } = payload;
   const timestamp = `${year}${month}${day}${hour}0000`;
   const timeMachineResult = await getClosestSnapshot(timestamp, url);
-  setUrlCreator(timeMachineResult);
+  dispatch(setUrlCreator(timeMachineResult));
 };
